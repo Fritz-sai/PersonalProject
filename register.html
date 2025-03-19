@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #d6d6d6;
+            font-style: normal;
+        }
+
+        .container {
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: rgb(243, 243, 243);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px;
+        }
+
+        .email {
+            width: 100%;
+        }
+
+        .save, .clear {
+            width: 100px;
+            height: 40px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .save {
+            background-color: rgb(38, 171, 38);
+        }
+
+        .clear {
+            background-color: rgb(203, 59, 59);
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 10px;
+        }
+
+        h3 {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-top: 2px;
+            font-size: 13px;
+            color: gray;
+        }
+
+        input {
+            height: 23px;
+            border-radius: 3px;
+            border-width: 1px;
+            padding-left: 5px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .date {
+            width: 100%;
+            height: 21px;
+        }
+
+        .date:focus {
+            outline: none;
+        }
+        .first {
+            width: 200px;
+        }
+        .save a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center; ">Registration Form</h2>
+        <form action="">
+            <table >
+                <tr><td><h3>Student Name</h3></td></tr>
+                <tr>
+                    <td class="first">
+                        <input  style="width: 95%;" type="text" id="firstname">
+                        <p>Last name</p>
+                    </td>
+                    <td class="first">
+                        <input  style="width: 95%;" type="text" id="lastname">
+                        <p>First Name</p>
+                    </td>
+                    <td class="first">
+                        <input  style="width: 95%;" type="text" id="middlename">
+                        <p>Middle Name</p>
+                    </td>
+                </tr>
+                
+                <tr><td><h3>Birth Date</h3></td><td><h3>Gender</h3></td><td><h3>Phone Number</h3></td></tr>
+                <tr>
+                    <td><input class="date" type="date" id="bday"></td>
+                    <td>
+                        <input type="radio" name="gender" value="male"> Male 
+                        <input type="radio" name="gender" value="female">Female
+                     </td>
+                    <td><input  style="width: 95%;" type="number" id="number"></td>
+                </tr>
+                <tr><td colspan="2"><h3>Email</h3></td><td><h3>Student Id</h3></td></tr>
+                <tr><td colspan="2"><input class="email" type="email" placeholder="Email Account" id="email"></td>
+                    <td><input  style="width: 95%;" type="text" placeholder="Id Number" id="studentId"></td></tr>
+                </tr>
+                <tr><td colspan="2"><h3>Year</h3></td><td><h3>Course Section</h3></td></tr>
+                <tr ><td ><input type="radio" name="year" value="one" id="first">1st Year</td>
+                    <td><input type="radio" name="year" value="two" id="second">2nd Year</td>
+                    <td><select class="date" name="course" id="course">
+                        <option value="ACT">Associate in Computer Technology</option>
+                        <option value="BSOA">Bachelor of Science in Office Administration</option>
+                        <option value="CT">Computer Technology</option>
+                        <option value="HM">Hospitality Management</option>
+                    </select></td>
+                <tr><td><input type="radio" name="year" value="three" id="third">3rd year</td>
+                    <td><input type="radio" name="year" value="four" id="fourth">4rth Year</td>
+                    <td><select class="date" name="" id="section">
+                        <!-- You can dynamically populate this select if needed -->
+                    </select></td></tr></tr>
+                <tr><td><h3>Address</h3></td></tr>
+                <tr><td colspan="3"><input style="width: 98%;" type="text" placeholder="Street Address" id="address"></td></tr>
+                <tr><td><select style="width: 98%; height: 25px;" name="province" id="probinsya">
+                    <option value="pampanga">Pampanga</option>
+                    <option value="tarlac">Tarlac</option>
+                    <option value="zambales">Zambales</option>
+                </select></td>
+                    <td><select style="width: 98%; height: 25px;" name="" id="city"></select></td>
+                    <td><input style="width: 93%;" type="number" placeholder="ZIP CODE" id="zipcode"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">
+                        <button type="button" class="save save-js">Submit</button>
+                        <input class="clear" type="reset" value="Clear">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script type="module" src="option.js"></script>
+</body>
+</html>
